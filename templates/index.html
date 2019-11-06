@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta http-equiv="Content-Type" content="width=device-width; text/html; charset=utf-8" />
+    
+		<link rel="stylesheet" type="text/css" href="../static/styles.css" />
+	</head>
+	<body>
+      <form action="{{ url_for('index') }}" class="inputtext" method="post" >
+        <span class="input-line">
+          <input type="text" class="input-field" placeholder="Text" name="submission" />
+        </span>
+              <span> <button type="submit" class="submit-button">Post</button> </span>
+      </form>
+		<div class="inputtext">
+      <h1>Posts</h1>
+      
+        {% for post in history %}
+          <li class="post">
+            {{ post.date_time }}:
+            <br>{{ post.text }}</br>
+          </li>
+        {% else %}
+          No posts yet
+        {% endfor %}
+     </div>
+        
+	</body>
+</html>
+
+</title>
+</head>
+<body>
+
+</body>
+</html>
